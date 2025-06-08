@@ -1,9 +1,12 @@
-/* Enable Flexbox layout */
+/* Flexbox layout as required */
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fffaf7;
+  color: #333;
 }
 
 main {
@@ -12,29 +15,85 @@ main {
   flex: auto;
 }
 
-/* Width allocation: 2/3 for article, 1/3 for aside */
 article {
   flex: 2;
   overflow-y: auto;
   padding: 1rem;
+  background-color: #fefefe;
+  border-right: 1px solid #ddd;
 }
 
 aside {
   flex: 1;
   overflow-y: auto;
   padding: 1rem;
+  background-color: #f9f9f9;
 }
 
-/* Optional: Style header, footer, nav */
-header, footer, nav {
-  background-color: #f0f0f0;
+/* Logo styling */
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: 1rem;
+  color: #ff6600;
+}
+
+/* Header styling */
+header {
+  background-color: #ffe9d6;
   padding: 1rem;
   text-align: center;
+  border-bottom: 2px solid #ffa500;
 }
 
-/* Basic responsive improvement */
+header h1 {
+  margin: 0.5rem 0;
+  color: #d35400;
+}
+
+/* Navigation styling */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav li a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+nav li a:hover {
+  color: #e67e22;
+}
+
+/* Contact and footer */
+#contact {
+  background-color: #f3f3f3;
+  padding: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+footer {
+  text-align: center;
+  background-color: #ffe9d6;
+  padding: 1rem;
+  border-top: 2px solid #ffa500;
+}
+
+/* Responsive layout for small screens */
 @media screen and (max-width: 768px) {
   main {
     flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
   }
 }

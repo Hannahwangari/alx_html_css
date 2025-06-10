@@ -29,7 +29,10 @@ body {
 
 .nav {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .nav a {
@@ -44,6 +47,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.hero-text {
+  flex: 1 1 300px;
 }
 
 .hero-text h1 {
@@ -55,8 +64,9 @@ body {
   background: #222;
   color: #fff;
   padding: 5px 10px;
-  margin: 5px;
+  margin: 5px 5px 5px 0;
   border-radius: 4px;
+  display: inline-block;
 }
 
 .register-btn {
@@ -79,6 +89,12 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 30px;
+  flex-wrap: wrap;
+}
+
+.pro {
+  flex: 1 1 250px;
+  text-align: center;
 }
 
 .pro img {
@@ -96,25 +112,27 @@ body {
 /* Tutorials */
 .tutorial-cards {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
 .card {
   border: 1px solid #ddd;
   padding: 20px;
-  flex: 1;
+  flex: 1 1 250px;
 }
 
 /* Membership */
 .plans {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .plan {
   background: #f0f0f0;
   padding: 20px;
-  flex: 1;
+  flex: 1 1 250px;
 }
 
 /* FAQ */
@@ -140,9 +158,61 @@ body {
   justify-content: center;
   gap: 20px;
   margin: 10px 0;
+  flex-wrap: wrap;
 }
 
 .footer-nav a {
   color: white;
   text-decoration: none;
+}
+
+/* ---------- RESPONSIVE STYLES ---------- */
+
+@media (max-width: 1024px) {
+  .hero-text h1 {
+    font-size: 40px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .tutorial-cards,
+  .pros-list,
+  .plans,
+  .footer-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 24px;
+  }
+
+  .register-btn {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  .tags span {
+    margin: 3px 2px;
+  }
 }

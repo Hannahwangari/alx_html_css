@@ -18,95 +18,133 @@ body {
 
 /* Header */
 .header {
-  background: #1d1d1d;
+  background: url('images/object.png') no-repeat center center/cover;
+  min-height: 100vh;
   color: white;
-  padding: 20px 0;
-}
-
-.logo {
-  height: 50px;
+  padding-bottom: 2rem;
 }
 
 .nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  padding: 1rem 2rem;
+}
+
+.nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
 }
 
 .nav a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
 }
 
-/* Hero Section */
 .hero {
-  background: #f9f9f9;
-  padding: 60px 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 30px;
+  text-align: center;
+  margin-top: 2rem;
 }
 
-.hero-text {
-  flex: 1 1 300px;
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
-.hero-text h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
+.tags {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
 }
 
 .tags span {
-  background: #222;
-  color: #fff;
-  padding: 5px 10px;
-  margin: 5px 5px 5px 0;
-  border-radius: 4px;
-  display: inline-block;
+  background-color: #ff6565;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
 }
 
 .register-btn {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #ff6a00;
-  color: #fff;
+  background-color: white;
+  color: black;
+  padding: 1rem 2rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-bottom: 3rem;
   cursor: pointer;
 }
 
-/* Pros Section */
-.pros {
-  background: #e6e6e6;
-  padding: 50px 0;
+.pros-title {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .pros-list {
   display: flex;
-  justify-content: space-between;
-  gap: 30px;
+  justify-content: center;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
 .pro {
-  flex: 1 1 250px;
   text-align: center;
+  max-width: 200px;
 }
 
 .pro img {
   width: 100px;
-  height: 100px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
 }
 
+
 /* Testimonials */
+.testimonials {
+  background-color: #f5f5f5;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonials img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.testimonials blockquote {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+.testimonials h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.testimonials p {
+  color: #666;
+  font-size: 0.9rem;
+}
 
 /* Testimonials (Quote) Section */
 .testimonials {
-  background: #f9f9f9;
+  background: #b45dcc;
   padding: 60px 20px;
   display: flex;
   justify-content: center;
@@ -179,63 +217,66 @@ body {
 .tutorial-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .card {
-  background-color: #f9f9f9;
-  padding: 20px;
+  background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
+  position: relative;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card img:first-child {
+.card-image {
+  position: relative;
   width: 100%;
   height: auto;
+}
+
+.tutorial-img {
+  width: 100%;
+  height: auto;
+  display: block;
   border-radius: 10px;
 }
 
-.card h3 {
-  font-size: 1.1rem;
-  color: #333;
-  margin: 15px 0 10px;
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
-.card p {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 10px;
-}
-
-.card h4 {
-  font-size: 0.95rem;
-  color: #444;
-}
-
-.card > div {
+.instructor {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  margin: 0.5rem 0;
+  gap: 0.5rem;
 }
 
-.card > div img {
+.instructor-img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
-/* Responsive tweak */
-@media (max-width: 768px) {
-  .tutorial-cards {
-    grid-template-columns: 1fr;
-  }
+.rating img {
+  width: 80px;
+  margin: 0.5rem 0;
 }
 
+.duration {
+  color: #666;
+  font-size: 0.875rem;
+}
 
 /* Membership Section */
 .membership {
@@ -405,52 +446,3 @@ body {
 
 
 /* ---------- RESPONSIVE STYLES ---------- */
-
-@media (max-width: 1024px) {
-  .hero-text h1 {
-    font-size: 40px;
-  }
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .hero-text h1 {
-    font-size: 32px;
-  }
-
-  .tutorial-cards,
-  .pros-list,
-  .plans,
-  .footer-nav {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-text h1 {
-    font-size: 24px;
-  }
-
-  .register-btn {
-    width: 100%;
-    padding: 15px;
-  }
-
-  .container {
-    width: 95%;
-  }
-
-  .tags span {
-    margin: 3px 2px;
-  }
-}

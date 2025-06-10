@@ -163,17 +163,79 @@ body {
 
 
 /* Tutorials */
+/* Videos (Most Popular Tutorials) Section */
+.videos {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.videos h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 40px;
+}
+
 .tutorial-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
 }
 
 .card {
-  border: 1px solid #ddd;
+  background-color: #f9f9f9;
   padding: 20px;
-  flex: 1 1 250px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
 }
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img:first-child {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 15px 0 10px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.card h4 {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.card > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card > div img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+  .tutorial-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* Membership */
 .plans {

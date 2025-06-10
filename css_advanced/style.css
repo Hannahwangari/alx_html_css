@@ -103,11 +103,64 @@ body {
 }
 
 /* Testimonials */
+
+/* Testimonials (Quote) Section */
 .testimonials {
-  background: #fff;
-  padding: 50px 0;
-  text-align: center;
+  background: #f9f9f9;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.quote-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quote-content img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.quote-content blockquote {
+  font-style: italic;
+  font-size: 1.25em;
+  color: #444;
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+.quote-content h3 {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #222;
+}
+
+.quote-content p {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 600px) {
+  .quote-content blockquote {
+    font-size: 1rem;
+  }
+
+  .quote-content img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
 
 /* Tutorials */
 .tutorial-cards {

@@ -1,0 +1,182 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Header & Hero */
+.hero {
+  background: url("images/headphones_hero_1.jpg") no-repeat center center/cover;
+  color: white;
+  padding: 40px 0 100px;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  color: #FF6565;
+}
+
+.hero-content h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: #FF6565;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* What we do */
+.what-we-do {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.what-we-do h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.feature {
+  flex: 1 1 200px;
+  padding: 20px;
+  text-align: center;
+}
+
+.feature i {
+  font-size: 48px;
+  color: #FF6565;
+  margin-bottom: 15px;
+}
+
+.feature h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Results section */
+.results {
+  background: url("images/headphones_hero_2.jpg") no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 60px 0;
+}
+
+.results h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.stat {
+  width: 150px;
+  position: relative;
+  text-align: center;
+}
+
+.stat img {
+  width: 100%;
+}
+
+.stat .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.percent {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.desc {
+  font-size: 14px;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .features,
+  .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat {
+    width: 120px;
+  }
+}

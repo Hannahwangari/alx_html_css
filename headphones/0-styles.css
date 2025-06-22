@@ -1,0 +1,138 @@
+/* === Reset and Base Styles === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* === CSS Variables === */
+:root {
+  --primary-color: #FF6565;
+  --max-width: 1000px;
+}
+
+/* === Container === */
+.container {
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* === Header / Hero Section === */
+.hero {
+  background: url("images/headphones_hero_1.jpg") no-repeat center center / cover;
+  padding: 40px 0 120px;
+  text-align: center;
+}
+
+/* === Header Layout === */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+/* === Logo === */
+.logo img {
+  height: 40px;
+}
+
+/* === Navigation === */
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover,
+.nav a:active {
+  color: var(--primary-color);
+}
+
+/* === Hero Content === */
+.hero-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.hero-content p:last-of-type {
+  margin-bottom: 40px;
+}
+
+/* === Button === */
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  padding: 12px 24px;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.btn:hover,
+.btn:active {
+  opacity: 0.9;
+}
+
+/* === Responsive Styles === */
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+  }
+
+  .logo img {
+    margin-bottom: 10px;
+  }
+
+  .hero-content {
+    padding: 0 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+}

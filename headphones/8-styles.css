@@ -1,0 +1,54 @@
+/* Container spacing */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Hide hamburger by default on larger screens */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* Responsive rules */
+@media (max-width: 480px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #333;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav.show {
+    display: block;
+  }
+
+  .nav a {
+    color: white;
+    text-decoration: none;
+  }
+}
